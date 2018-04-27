@@ -17,6 +17,5 @@ main(int argc, char **argv)
 {
   char *buffer = (char *)malloc(16 * sizeof(char));
   stringcopy(buffer, argv[1]);
-  printf("%s
-", buffer);
+  printf("%s", buffer);
 }
