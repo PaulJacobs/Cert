@@ -1,4 +1,4 @@
-* 
+/* 
    This use of strcpy ensures that the buffer is large enough to
    accomodate the string being copied. The dataflow analysis needed to
    determine whether the strcpy is safe is somewhat more complex that
