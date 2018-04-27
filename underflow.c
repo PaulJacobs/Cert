@@ -16,8 +16,10 @@ void func(char *str)
   char *firstslash = strchr(str, '/');
 
   if (!firstslash)
+  {
     strncpy(buf, str, 1023);  /* leave room for the zero */
     buf[1023] = 0;
+  }
   else
   {
     len = firstslash - str;     /* length of the first path component */
