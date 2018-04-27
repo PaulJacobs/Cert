@@ -34,7 +34,7 @@ main()
   {
     func();
   }
-  catch(char * message)
+  catch(char *message)
   {
     fprintf(stderr, message);                // line 32
   }
