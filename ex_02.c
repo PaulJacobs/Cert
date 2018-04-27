@@ -27,34 +27,28 @@ main (int argc, char * argv [])
     FILE * fp;
     
     if (argc != 3) {
-        fprintf (stderr, "usage : %s file message
-", argv [0]);
+        fprintf (stderr, "usage : %s file message", argv [0]);
         exit(EXIT_FAILURE);
     }
     if ((fd = open (argv [1], O_WRONLY, 0)) < 0) {
-        fprintf (stderr, "Can't open %s
-", argv [1]);
+        fprintf (stderr, "Can't open %s", argv [1]);
         exit(EXIT_FAILURE);
     }
     fstat (fd, & st);
     if (st . st_uid != getuid ()) {
-        fprintf (stderr, "%s not owner !
-", argv [1]);
+        fprintf (stderr, "%s not owner !", argv [1]);
         exit(EXIT_FAILURE);
     }
     if (! S_ISREG (st . st_mode)) {
-      fprintf (stderr, "%s not a normal file
-", argv[1]); // line 32
+      fprintf (stderr, "%s not a normal file", argv[1]); // line 32
         exit(EXIT_FAILURE);
     }
     if ((fp = fdopen (fd, "w")) == NULL) {
-        fprintf (stderr, "Can't open
-");
+        fprintf (stderr, "Can't open");
         exit(EXIT_FAILURE);
     }
     fprintf (fp, "%s", argv [2]);
     fclose (fp);
-    fprintf (stderr, "Write Ok
-");
+    fprintf (stderr, "Write Ok");
     exit(EXIT_SUCCESS);
 }
