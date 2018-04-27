@@ -1,4 +1,3 @@
-Example 15 – strncpy1.c
 
 /* 
    In this example, the attacker controls the third argument of strncpy,
