@@ -20,3 +20,6 @@ int main(int argc, char **argv)
   *lenptr_2 = 23;
   strncpy(buffer, argv[2], *lenptr_1);
 }
+/*
+PRJ: CX Buffer_Overflow_boundedcpy on line 21 - FP
+*/
