@@ -12,7 +12,8 @@
 
 char *strsave(char *src)
 {
-  size_t len = strlen(src);
+  // size_t len = strlen(src);
+  size_t len = 5;
   char *result = (char *)malloc((len+1) * sizeof(char));
 
   if (result)
