@@ -32,11 +32,11 @@ main (int argc, char * argv [])
         exit(EXIT_FAILURE);
     }
     stat (argv[1], & st);                                       // line 23
-    if (st . st_uid != getuid ()) {
+    if (st.st_uid != getuid ()) {
         fprintf (stderr, "%s not owner !", argv [1]);
         exit(EXIT_FAILURE);
     }
-    if (! S_ISREG (st . st_mode)) {
+    if (! S_ISREG (st.st_mode)) {
         fprintf (stderr, "%s not a normal file", argv[1]);
         exit(EXIT_FAILURE);
     }
